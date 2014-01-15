@@ -323,7 +323,7 @@ module AdminUI
       @token = nil
 
       response = Utils.http_post(@config,
-                                 "#{ @authorization_endpoint }/oauth/token",
+                                 "#{ @token_endpoint }/oauth/token",
                                  "grant_type=password&username=#{ @config.uaa_admin_credentials_username }&password=#{ @config.uaa_admin_credentials_password }",
                                  'Basic Y2Y6')
 
